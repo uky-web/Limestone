@@ -1,0 +1,6 @@
+name: Limestone
+description: The Limestone component library.
+package: UKY
+type: module
+version: '3.1.2'
+core_version_requirement: ">=10"

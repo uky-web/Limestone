@@ -1,0 +1,15 @@
+{
+    "name": "uky-web/limestone",
+    "description": "The Limestone component library.",
+    "license": "MIT",
+    "type": "drupal-custom-module",
+    "support": {
+        "source": "https://github.com/uky-web/limestone"
+    },
+    "authors": [
+        {
+            "name": "University of Kentucky Webcom",
+            "email": "universitywebservices@l.uky.edu"
+        }
+    ]
+}
