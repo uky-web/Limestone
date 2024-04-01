@@ -1,0 +1,41 @@
+<?php
+
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function limestone_library_info_alter(&$libraries, $extension) {
+  $module = 'limestone';
+  if ($extension === 'ckeditor5') {
+    // Initialize $css variable to an empty array.
+    $css = [];
+    
+    // Add paths to stylesheets specified by a module's ckeditor5-stylesheets
+    // config property.
+    $module_path = \Drupal::service('extension.list.module')->getPath($module);
+    $info = \Drupal::service('extension.list.module')->getExtensionInfo($module);
+    if (isset($info['ckeditor5-stylesheets']) && $info['ckeditor5-stylesheets'] !== FALSE) {
+      $css = $info['ckeditor5-stylesheets'];
+      foreach ($css as $key => $url) {
+        // CSS URL is relative to theme.
+        $css[$key] = '/' . $module_path . '/' . $url;
+      }
+    }
+    // Check if $css is initialized and not null before using it.
+    if (!empty($css)) {
+      $libraries['internal.drupal.ckeditor5.stylesheets'] = [
+        'css' => [
+          'theme' => array_fill_keys(array_values($css), []),
+        ],
+      ];
+    }
+  }
+}
+
+
+
+
+
+
+?>

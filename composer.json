@@ -3,7 +3,7 @@
   "description": "The Limestone component library.",
   "license": "MIT",
   "type": "drupal-custom-module",
-  "version": "3.2.1",
+  "version": "3.2.2",
   "support": {
     "source": "https://github.com/uky-web/limestone"
   },
