@@ -1,4 +1,4 @@
-"use strict";
-
-var tabs = function tabs() {};
+const tabs = () => {
+    
+};
 //# sourceMappingURL=tabs.js.map

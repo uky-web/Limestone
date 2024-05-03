@@ -1,16 +1,14 @@
-'use strict';
-
 /* 
  * code specific to patternlab goes here
  */
 
-$(document).ready(function () {
+$(document).ready(() => {
   // Grid toggle behavior, dev only
-  $('.gridToggle').on('click', function () {
+  $('.gridToggle').on('click', () => {
     $('body').toggleClass('layout-grid--on');
   });
   // Include labels
-  $('.includeToggle').on('click', function () {
+  $('.includeToggle').on('click', () => {
     $('body').toggleClass('twig-includes--on');
   });
 
@@ -29,5 +27,7 @@ $(document).ready(function () {
   globalMegamenu();
   //link_group_dropdown();
 
+
 });
+
 //# sourceMappingURL=patternlab.js.map

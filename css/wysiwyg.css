@@ -60,8 +60,8 @@
 }
 @font-face {
   font-family: "iconfont";
-  src: url("../fonts/icons-274024412.eot");
-  src: url("../fonts/icons-274024412.eot?#iefix") format("eot"), url("../fonts/icons-274024412.woff2") format("woff2"), url("../fonts/icons-274024412.woff") format("woff"), url("../fonts/icons-274024412.ttf") format("truetype"), url("../fonts/icons-274024412.svg#icons-274024412") format("svg");
+  src: url("../fonts/icons-407863642.eot");
+  src: url("../fonts/icons-407863642.eot?#iefix") format("eot"), url("../fonts/icons-407863642.woff2") format("woff2"), url("../fonts/icons-407863642.woff") format("woff"), url("../fonts/icons-407863642.ttf") format("truetype"), url("../fonts/icons-407863642.svg#icons-407863642") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -4351,8 +4351,7 @@
   font-family: sans-serif;
   font-weight: bold;
   text-align: center;
-  -webkit-box-shadow: #0033a0 0 0 0 6px inset;
-          box-shadow: #0033a0 0 0 0 6px inset;
+  box-shadow: #0033a0 0 0 0 6px inset;
 }
 .ck-content .nc-placeholder p {
   font-size: 1.1667rem;
@@ -4453,20 +4452,17 @@
   text-align: center;
 }
 .ck-content html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .ck-content body {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .ck-content body *,
 .ck-content body *::before,
 .ck-content body *::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 .ck-content body b {
   font-weight: 600;
@@ -4579,7 +4575,6 @@
   text-align: justify;
 }
 .ck-content a {
-  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 .ck-content .underline-link,
@@ -4589,7 +4584,6 @@
   background-repeat: no-repeat;
   background-position: 0 0.5em, 0 0;
   position: relative;
-  -webkit-transition: 0.2s background-position ease-out;
   transition: 0.2s background-position ease-out;
   font-weight: 300;
   text-decoration: none;
@@ -4621,7 +4615,6 @@
   background-repeat: no-repeat;
   background-position: 0 0.5em, 0 0;
   position: relative;
-  -webkit-transition: 0.2s background-position ease-out;
   transition: 0.2s background-position ease-out;
   font-weight: 300;
   text-decoration: none;
@@ -4648,7 +4641,6 @@
   display: inline-block;
   position: relative;
   padding-left: 1.5rem;
-  -webkit-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
   font-weight: 500;
   text-decoration: none;
@@ -4686,7 +4678,6 @@
 .ck-content .editorial .link--fancy-reverse::before {
   position: absolute;
   left: 0.25em;
-  -webkit-transition: left 0.3s ease-in-out;
   transition: left 0.3s ease-in-out;
   color: #1897d4;
   font-family: iconfont;
@@ -4732,9 +4723,7 @@
   text-decoration: none;
 }
 .ck-content .art-link .icon-label {
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  align-items: stretch;
 }
 .ck-content .art-link .icon-label .ic {
   margin: 0;
@@ -4744,8 +4733,7 @@
   font-size: 2.6rem;
 }
 .ck-content .art-link .icon-label .label {
-  -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
   margin: 0;
   padding: 0.5rem 1em;
   background-image: none;
@@ -11467,7 +11455,6 @@
   padding-right: calc(1.875rem - 3px);
   padding-bottom: calc(1rem - 4px);
   padding-left: calc(1.875rem - 3px);
-  -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   border-width: 2px;
   border-style: solid;
@@ -11921,7 +11908,6 @@
 .ck-content .editorial .editorial__aside {
   max-width: 100%;
   margin: 0 auto 1rem;
-  -webkit-transition: 0.3s max-width ease-in-out;
   transition: 0.3s max-width ease-in-out;
 }
 .ck-content .editorial strong,

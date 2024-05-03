@@ -1,6 +1,4 @@
-'use strict';
-
-var modals = function modals() {
+const modals = () => {
   $('.modal-control').magnificPopup();
 
   $('.nice-video--control').magnificPopup({
@@ -12,4 +10,5 @@ var modals = function modals() {
     fixedContentPos: false
   });
 };
+
 //# sourceMappingURL=modals.js.map

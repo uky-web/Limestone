@@ -1,14 +1,11 @@
-'use strict';
-
 /*
  * jQuery Accessible Accordion system, using ARIA
  * @version v2.5.2
  * Website: https://a11y.nicolas-hoffmann.net/accordion/
  * License MIT: https://github.com/nico3333fr/jquery-accessible-accordion-aria/blob/master/LICENSE
  */
-(function (factory) {
+(function(factory) {
     'use strict';
-
     if (typeof define === 'function' && define.amd) {
         define(['jquery'], factory);
     } else if (typeof exports !== 'undefined') {
@@ -16,7 +13,7 @@
     } else {
         factory(window.jQuery);
     }
-})(function ($) {
+}(function($) {
     'use strict';
 
     var defaultConfig = {
@@ -38,7 +35,7 @@
         accordionPrefixId: 'accordion'
     };
 
-    var Accordion = function Accordion($el, options) {
+    var Accordion = function($el, options) {
         this.options = $.extend({}, defaultConfig, options);
 
         this.$wrapper = $el;
@@ -48,7 +45,7 @@
         this.initEvents();
     };
 
-    Accordion.prototype.initAttributes = function () {
+    Accordion.prototype.initAttributes = function() {
         this.$wrapper.attr({
             'role': 'tablist',
             'aria-multiselectable': this.options.multiselectable.toString()
@@ -60,7 +57,7 @@
             this.$wrapper.attr('id', this.options.accordionPrefixId + '-' + index_lisible);
         }
 
-        this.$panels.each($.proxy(function (index, el) {
+        this.$panels.each($.proxy(function(index, el) {
             var $panel = $(el);
             var $header = $(this.options.headersSelector, $panel);
             var $button = this.options.buttonsGeneratedContent === 'html' ? this.options.button.clone().html($header.html()) : this.options.button.clone().text($header.text());
@@ -108,7 +105,7 @@
         this.$buttons = $(this.options.buttonsSelector, this.$wrapper);
     };
 
-    Accordion.prototype.initEvents = function () {
+    Accordion.prototype.initEvents = function() {
         this.$wrapper.on('focus', this.options.buttonsSelector, $.proxy(this.focusButtonEventHandler, this));
 
         this.$wrapper.on('click', this.options.buttonsSelector, $.proxy(this.clickButtonEventHandler, this));
@@ -118,7 +115,7 @@
         this.$wrapper.on('keydown', this.options.panelsSelector, $.proxy(this.keydownPanelEventHandler, this));
     };
 
-    Accordion.prototype.focusButtonEventHandler = function (e) {
+    Accordion.prototype.focusButtonEventHandler = function(e) {
         var $target = $(e.target);
         var $button = $target.is('button') ? $target : $target.closest('button');
 
@@ -133,7 +130,7 @@
         });
     };
 
-    Accordion.prototype.clickButtonEventHandler = function (e) {
+    Accordion.prototype.clickButtonEventHandler = function(e) {
         var $target = $(e.target);
         var $button = $target.is('button') ? $target : $target.closest('button');
         var $panel = $('#' + $button.attr('aria-controls'));
@@ -142,12 +139,10 @@
         $button.attr('aria-selected', 'true');
 
         // opened or closed?
-        if ($button.attr('aria-expanded') === 'false') {
-            // closed
+        if ($button.attr('aria-expanded') === 'false') { // closed
             $button.attr('aria-expanded', 'true');
             $panel.attr('aria-hidden', 'false');
-        } else {
-            // opened
+        } else { // opened
             $button.attr('aria-expanded', 'false');
             $panel.attr('aria-hidden', 'true');
         }
@@ -157,7 +152,7 @@
             this.$buttons.not($button).attr('aria-expanded', 'false');
         }
 
-        setTimeout(function () {
+        setTimeout(function() {
             $button.focus();
         }, 0);
 
@@ -165,7 +160,7 @@
         e.preventDefault();
     };
 
-    Accordion.prototype.keydownButtonEventHandler = function (e) {
+    Accordion.prototype.keydownButtonEventHandler = function(e) {
         var $target = $(e.target);
         var $button = $target.is('button') ? $target : $target.closest('button');
         var $firstButton = this.$buttons.first();
@@ -194,23 +189,24 @@
                 'aria-selected': 'false'
             });
 
+
             if (e.keyCode === 36) {
                 $target = $firstButton;
             }
             // strike end in the tab => last tab
             else if (e.keyCode === 35) {
-                    $target = $lastButton;
-                }
-                // strike up or left in the tab => previous tab
-                else if ($.inArray(e.keyCode, k.prev) >= 0) {
-                        // if we are on first one, activate last
-                        $target = $button.is($firstButton) ? $lastButton : this.$buttons.eq(index - 1);
-                    }
-                    // strike down or right in the tab => next tab
-                    else if ($.inArray(e.keyCode, k.next) >= 0) {
-                            // if we are on last one, activate first
-                            $target = $button.is($lastButton) ? $firstButton : this.$buttons.eq(index + 1);
-                        }
+                $target = $lastButton;
+            }
+            // strike up or left in the tab => previous tab
+            else if ($.inArray(e.keyCode, k.prev) >= 0) {
+                // if we are on first one, activate last
+                $target = $button.is($firstButton) ? $lastButton : this.$buttons.eq(index - 1);
+            }
+            // strike down or right in the tab => next tab
+            else if ($.inArray(e.keyCode, k.next) >= 0) {
+                // if we are on last one, activate first
+                $target = $button.is($lastButton) ? $firstButton : this.$buttons.eq(index + 1);
+            }
 
             if ($target !== null) {
                 this.goToHeader($target);
@@ -220,7 +216,7 @@
         }
     };
 
-    Accordion.prototype.keydownPanelEventHandler = function (e) {
+    Accordion.prototype.keydownPanelEventHandler = function(e) {
         var $panel = $(e.target).closest(this.options.panelsSelector);
         var $button = $('#' + $panel.attr('aria-labelledby'));
         var $firstButton = this.$buttons.first();
@@ -234,12 +230,12 @@
         }
         // strike pageup + ctrl => go to prev header
         else if (e.keyCode === 33 && e.ctrlKey) {
-                $target = $button.is($firstButton) ? $lastButton : this.$buttons.eq(index - 1);
-            }
-            // strike pagedown + ctrl => go to next header
-            else if (e.keyCode === 34 && e.ctrlKey) {
-                    $target = $button.is($lastButton) ? $firstButton : this.$buttons.eq(index + 1);
-                }
+            $target = $button.is($firstButton) ? $lastButton : this.$buttons.eq(index - 1);
+        }
+        // strike pagedown + ctrl => go to next header
+        else if (e.keyCode === 34 && e.ctrlKey) {
+            $target = $button.is($lastButton) ? $firstButton : this.$buttons.eq(index + 1);
+        }
 
         if ($target !== null) {
             this.goToHeader($target);
@@ -247,7 +243,7 @@
         }
     };
 
-    Accordion.prototype.goToHeader = function ($target) {
+    Accordion.prototype.goToHeader = function($target) {
         if ($target.length !== 1) {
             return;
         }
@@ -257,31 +253,35 @@
             'tabindex': null
         });
 
-        setTimeout(function () {
+        setTimeout(function() {
             $target.focus();
         }, 0);
     };
 
+
     var PLUGIN = 'accordion';
 
-    $.fn[PLUGIN] = function (params) {
+    $.fn[PLUGIN] = function(params) {
         var options = $.extend({}, $.fn[PLUGIN].defaults, params);
 
-        return this.each(function () {
+
+        return this.each(function() {
             var $el = $(this);
 
             var specificOptions = {
                 multiselectable: $el.attr('data-accordion-multiselectable') === 'none' ? false : options.multiselectable,
-                prefixClass: typeof $el.attr('data-accordion-prefix-classes') !== 'undefined' ? $el.attr('data-accordion-prefix-classes') : options.prefixClass,
-                buttonsGeneratedContent: typeof $el.attr('data-accordion-button-generated-content') !== 'undefined' ? $el.attr('data-accordion-button-generated-content') : options.buttonsGeneratedContent,
+                prefixClass: typeof($el.attr('data-accordion-prefix-classes')) !== 'undefined' ? $el.attr('data-accordion-prefix-classes') : options.prefixClass,
+                buttonsGeneratedContent: typeof($el.attr('data-accordion-button-generated-content')) !== 'undefined' ? $el.attr('data-accordion-button-generated-content') : options.buttonsGeneratedContent,
                 direction: $el.closest('[dir="rtl"]').length > 0 ? 'rtl' : options.direction
             };
             specificOptions = $.extend({}, options, specificOptions);
 
-            $el.data[PLUGIN] = new Accordion($el, specificOptions);
+            $el.data[PLUGIN] = new Accordion($el, specificOptions); 
         });
     };
 
     $.fn[PLUGIN].defaults = defaultConfig;
-});
+
+}));
+
 //# sourceMappingURL=jquery-accessible-accordion.js.map

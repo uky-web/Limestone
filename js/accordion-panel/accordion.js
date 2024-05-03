@@ -1,6 +1,5 @@
-'use strict';
-
-var accordion = function accordion() {
+const accordion = () => {
   $('.js-accordion').accordion();
 };
+
 //# sourceMappingURL=accordion.js.map

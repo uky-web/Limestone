@@ -1,25 +1,23 @@
-'use strict';
-
 /* 
  * Ambient video processing and initialization. 
  */
 
-var ambient_video = function ambient_video() {
-  var $av = $('.ambient-video video');
+const ambient_video = () => {
+  const $av = $('.ambient-video video');
   if ($av.length < 1) return; // Bail if we have no matching components
-
-  var $sources = $av.find('source');
+    
+  const $sources = $av.find('source');
 
   if (window.matchMedia('(min-width: 64rem)').matches) {
     $av.attr('autoplay', true);
     $av[0].play();
 
     // Since the video is working, enable the play / pause control
-    var $control = $('.ambient-video button');
+    const $control = $('.ambient-video button');
     $control.show();
-    $control.click(function (e) {
-      var $button = $(e.currentTarget);
-      var video = $button.siblings('video')[0];
+    $control.click( e => {
+      const $button = $(e.currentTarget);
+      const video = $button.siblings('video')[0];
       $button.toggleClass('video-button--paused');
       if (video.paused) {
         video.play();
@@ -33,4 +31,5 @@ var ambient_video = function ambient_video() {
     $av[0].stop();
   }
 };
+
 //# sourceMappingURL=ambient-video.js.map

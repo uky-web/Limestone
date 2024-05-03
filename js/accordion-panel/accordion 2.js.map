@@ -1,1 +1,1 @@
-{"version":3,"sources":["accordion-panel/accordion 2.js"],"names":["accordion","$"],"mappings":";;AAAA,IAAMA,YAAY,SAAZA,SAAY,GAAM;AACtBC,IAAE,eAAF,EAAmBD,SAAnB;AACD,CAFD","file":"accordion 2.js","sourcesContent":["const accordion = () => {\n  $('.js-accordion').accordion();\n};\n"]}
+{"version":3,"names":[],"mappings":"","sources":["accordion-panel/accordion 2.js"],"sourcesContent":["const accordion = () => {\n  $('.js-accordion').accordion();\n};\n"],"file":"accordion 2.js"}

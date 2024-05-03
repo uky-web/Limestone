@@ -2,8 +2,8 @@
   "name": "uky-web/limestone",
   "description": "The Limestone component library.",
   "license": "MIT",
-  "type": "drupal-custom-module",
-  "version": "3.2.2",
+  "type": "uky-web-module",
+  "version": "3.3.0",
   "support": {
     "source": "https://github.com/uky-web/limestone"
   },
