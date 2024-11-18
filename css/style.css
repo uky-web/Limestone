@@ -104,8 +104,8 @@ body {
 
 @font-face {
   font-family: "iconfont";
-  src: url("../fonts/icons-525065521.eot");
-  src: url("../fonts/icons-525065521.eot?#iefix") format("eot"), url("../fonts/icons-525065521.woff2") format("woff2"), url("../fonts/icons-525065521.woff") format("woff"), url("../fonts/icons-525065521.ttf") format("truetype"), url("../fonts/icons-525065521.svg#icons-525065521") format("svg");
+  src: url("../fonts/icons-630056491.eot");
+  src: url("../fonts/icons-630056491.eot?#iefix") format("eot"), url("../fonts/icons-630056491.woff2") format("woff2"), url("../fonts/icons-630056491.woff") format("woff"), url("../fonts/icons-630056491.ttf") format("truetype"), url("../fonts/icons-630056491.svg#icons-630056491") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -4403,6 +4403,10 @@ form .form-item {
   color: var(--text);
 }
 
+body {
+  margin: 0;
+}
+
 a:not([class]):link, a:not([class]):visited {
   color: var(--link);
 }
@@ -4410,17 +4414,17 @@ a:not([class]):hover, a:not([class]):active {
   color: var(--link-active);
 }
 
-:root {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-:root *,
-:root *::before,
-:root *::after {
+body *,
+body *::before,
+body *::after {
   box-sizing: inherit;
 }
-:root b {
+body b {
   font-weight: 600;
 }
 
