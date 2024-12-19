@@ -104,8 +104,8 @@ body {
 
 @font-face {
   font-family: "iconfont";
-  src: url("../fonts/icons-419636261.eot");
-  src: url("../fonts/icons-419636261.eot?#iefix") format("eot"), url("../fonts/icons-419636261.woff2") format("woff2"), url("../fonts/icons-419636261.woff") format("woff"), url("../fonts/icons-419636261.ttf") format("truetype"), url("../fonts/icons-419636261.svg#icons-419636261") format("svg");
+  src: url("../fonts/icons-756049454.eot");
+  src: url("../fonts/icons-756049454.eot?#iefix") format("eot"), url("../fonts/icons-756049454.woff2") format("woff2"), url("../fonts/icons-756049454.woff") format("woff"), url("../fonts/icons-756049454.ttf") format("truetype"), url("../fonts/icons-756049454.svg#icons-756049454") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -4626,8 +4626,8 @@ button:hover.button--ghost,
 a.button:hover.button--ghost,
 input.button:hover.button--ghost {
   background-color: var(--button-background);
-  border-color: var(--button-border);
-  color: var(--button-text);
+  border-color: var(--button-background);
+  --button-hover-text: var(--button-hover-background);
 }
 button:active, button[aria-pressed=true],
 a.button:active,
@@ -4962,7 +4962,8 @@ a.button.button--ghost,
 input.button.button--ghost {
   background-color: transparent;
   border-color: var(--button-hover-border);
-  color: var(--button-hover-text);
+  --button-text: var(--button-hover-text);
+  --button-border: var(--button-hover-border);
 }
 button.button--bluegrass,
 a.button.button--bluegrass,
@@ -11305,47 +11306,47 @@ button.mfp-close {
   margin-bottom: 0;
 }
 .page-header.page-header--split .page-header__content {
-  --link: var(--color-wildcat-white);
-  --link-active: var(--color-sky);
-  --menu-icon-color: var(--color-cool-neutral);
-  --menu-icon-color-active: var(--color-cool-neutral);
-  --text: var(--color-wildcat-white);
-  --accent: var(--color-river-green);
-  --button-border: var(--color-wildcat-white);
-  --button-background: var(--color-wildcat-white);
-  --button-text: var(--color-wildcat-blue);
-  --button-disabled-border: rgba(237, 237, 237, 0.66);
-  --button-disabled-background: rgba(237, 237, 237, 0.66);
-  --button-disabled-text: var(--color-wildcat-blue);
-  --button-hover-border: var(--color-wildcat-white);
-  --button-hover-background: var(--color-wildcat-blue);
-  --button-hover-text: var(--color-wildcat-white);
-  --button-active-border: var(--color-dark-blue);
-  --button-active-background: var(--color-cool-neutral);
-  --button-active-text: var(--color-wildcat-blue);
-  --button-focus-border: var(--color-wildcat-white);
-  --button-focus-background: var(--color-cool-neutral);
+  --link: var(--color-wildcat-black);
+  --link-active: var(--color-wildcat-blue);
+  --menu-icon-color: var(--color-wildcat-blue);
+  --menu-icon-color-active: var(--color-wildcat-blue);
+  --text: var(--color-wildcat-black);
+  --accent: var(--color-sunset);
+  --button-border: var(--color-wildcat-blue);
+  --button-background: var(--color-wildcat-blue);
+  --button-text: var(--color-wildcat-white);
+  --button-disabled-border: var(--color-subtle-gray);
+  --button-disabled-background: var(--color-subtle-gray);
+  --button-disabled-text: var(--color-dark-gray);
+  --button-hover-border: var(--color-wildcat-blue);
+  --button-hover-background: var(--color-wildcat-white);
+  --button-hover-text: var(--color-wildcat-blue);
+  --button-active-border: var(--color-wildcat-blue);
+  --button-active-background: var(--color-wildcat-blue);
+  --button-active-text: var(--color-wildcat-white);
+  --button-focus-border: var(--color-bluegrass);
+  --button-focus-background: var(--color-wildcat-white);
   --button-focus-text: var(--color-wildcat-blue);
-  --fancy-link: var(--color-wildcat-white);
-  --fancy-link-active: var(--color-sky);
-  --headline-group-super: var(--color-cool-neutral);
-  --headline-group-head: var(--color-wildcat-white);
-  --headline-group-sub: var(--color-cool-neutral);
-  --media-citation: var(--color-wildcat-white);
+  --fancy-link: var(--color-medium-blue);
+  --fancy-link-active: var(--color-light-blue);
+  --headline-group-super: var(--color-dark-gray);
+  --headline-group-head: var(--color-wildcat-black);
+  --headline-group-sub: var(--color-dark-gray);
+  --media-citation: var(--color-dark-gray);
   --carousel-single-button: var(--color-dark-gray);
   --carousel-single-button-art: var(--color-wildcat-white);
-  --carousel-center-button: transparent;
+  --carousel-center-button: var(--color-dark-gray);
   --carousel-center-button-art: var(--color-wildcat-white);
-  --carousel-dot: var(--color-subtle-gray);
-  --carousel-dot-active: var(--color-sky);
+  --carousel-dot: var(--color-bluegrass);
+  --carousel-dot-active: var(--color-wildcat-black);
   --carousel-center-caption: var(--color-wildcat-black);
-  --media-background: var(--color-wildcat-black);
-  --statistic-head-color: var(--color-wildcat-white);
-  --statistic-subhead-color: var(--color-sky);
-  --logo-color: var(--color-wildcat-white);
-  --wordmark-color: var(--color-wildcat-white);
-  --dashed-border-color: rgba(255, 255, 255, 0.3);
-  --form-borders: transparent;
+  --media-background: var(--color-wildcat-blue);
+  --statistic-head-color: var(--color-wildcat-blue);
+  --statistic-subhead-color: var(--color-bluegrass);
+  --logo-color: var(--color-wildcat-blue);
+  --wordmark-color: var(--color-wildcat-black);
+  --dashed-border-color: rgba(44, 42, 41, 0.3);
+  --form-borders: var(--color-cool-neutral);
   color: var(--text);
 }
 .page-header.page-header--split .page-header__content a:link, .page-header.page-header--split .page-header__content a:visited {
@@ -11361,6 +11362,62 @@ button.mfp-close {
   color: var(--button-hover-text);
 }
 .page-header.page-header--split.slab--light-gray .page-header__content {
+  --link: var(--color-wildcat-black);
+  --link-active: var(--color-wildcat-blue);
+  --menu-icon-color: var(--color-wildcat-blue);
+  --menu-icon-color-active: var(--color-wildcat-blue);
+  --text: var(--color-wildcat-black);
+  --accent: var(--color-sunset);
+  --button-border: var(--color-wildcat-blue);
+  --button-background: var(--color-wildcat-blue);
+  --button-text: var(--color-wildcat-white);
+  --button-disabled-border: var(--color-subtle-gray);
+  --button-disabled-background: var(--color-subtle-gray);
+  --button-disabled-text: var(--color-dark-gray);
+  --button-hover-border: var(--color-wildcat-blue);
+  --button-hover-background: var(--color-wildcat-white);
+  --button-hover-text: var(--color-wildcat-blue);
+  --button-active-border: var(--color-wildcat-blue);
+  --button-active-background: var(--color-wildcat-blue);
+  --button-active-text: var(--color-wildcat-white);
+  --button-focus-border: var(--color-bluegrass);
+  --button-focus-background: var(--color-wildcat-white);
+  --button-focus-text: var(--color-wildcat-blue);
+  --fancy-link: var(--color-medium-blue);
+  --fancy-link-active: var(--color-light-blue);
+  --headline-group-super: var(--color-dark-gray);
+  --headline-group-head: var(--color-wildcat-black);
+  --headline-group-sub: var(--color-dark-gray);
+  --media-citation: var(--color-dark-gray);
+  --carousel-single-button: var(--color-dark-gray);
+  --carousel-single-button-art: var(--color-wildcat-white);
+  --carousel-center-button: var(--color-dark-gray);
+  --carousel-center-button-art: var(--color-wildcat-white);
+  --carousel-dot: var(--color-bluegrass);
+  --carousel-dot-active: var(--color-wildcat-black);
+  --carousel-center-caption: var(--color-wildcat-black);
+  --media-background: var(--color-wildcat-blue);
+  --statistic-head-color: var(--color-wildcat-blue);
+  --statistic-subhead-color: var(--color-bluegrass);
+  --logo-color: var(--color-wildcat-blue);
+  --wordmark-color: var(--color-wildcat-black);
+  --dashed-border-color: rgba(44, 42, 41, 0.3);
+  --form-borders: var(--color-cool-neutral);
+  color: var(--text);
+}
+.page-header.page-header--split.slab--light-gray .page-header__content a:link, .page-header.page-header--split.slab--light-gray .page-header__content a:visited {
+  color: var(--link);
+}
+.page-header.page-header--split.slab--light-gray .page-header__content a:hover, .page-header.page-header--split.slab--light-gray .page-header__content a:active {
+  color: var(--link-active);
+}
+.page-header.page-header--split.slab--light-gray .page-header__content a.button:link, .page-header.page-header--split.slab--light-gray .page-header__content a.button:visited {
+  color: var(--button-text);
+}
+.page-header.page-header--split.slab--light-gray .page-header__content a.button:hover, .page-header.page-header--split.slab--light-gray .page-header__content a.button:active {
+  color: var(--button-hover-text);
+}
+.page-header.page-header--split.slab--dark-blue .page-header__content {
   --link: var(--color-wildcat-white);
   --link-active: var(--color-sky);
   --menu-icon-color: var(--color-cool-neutral);
@@ -11404,62 +11461,6 @@ button.mfp-close {
   --form-borders: transparent;
   color: var(--text);
 }
-.page-header.page-header--split.slab--light-gray .page-header__content a:link, .page-header.page-header--split.slab--light-gray .page-header__content a:visited {
-  color: var(--link);
-}
-.page-header.page-header--split.slab--light-gray .page-header__content a:hover, .page-header.page-header--split.slab--light-gray .page-header__content a:active {
-  color: var(--link-active);
-}
-.page-header.page-header--split.slab--light-gray .page-header__content a.button:link, .page-header.page-header--split.slab--light-gray .page-header__content a.button:visited {
-  color: var(--button-text);
-}
-.page-header.page-header--split.slab--light-gray .page-header__content a.button:hover, .page-header.page-header--split.slab--light-gray .page-header__content a.button:active {
-  color: var(--button-hover-text);
-}
-.page-header.page-header--split.slab--dark-blue .page-header__content {
-  --link: var(--color-wildcat-black);
-  --link-active: var(--color-wildcat-blue);
-  --menu-icon-color: var(--color-wildcat-blue);
-  --menu-icon-color-active: var(--color-wildcat-blue);
-  --text: var(--color-wildcat-black);
-  --accent: var(--color-sunset);
-  --button-border: var(--color-wildcat-blue);
-  --button-background: var(--color-wildcat-blue);
-  --button-text: var(--color-wildcat-white);
-  --button-disabled-border: var(--color-subtle-gray);
-  --button-disabled-background: var(--color-subtle-gray);
-  --button-disabled-text: var(--color-dark-gray);
-  --button-hover-border: var(--color-wildcat-blue);
-  --button-hover-background: var(--color-wildcat-white);
-  --button-hover-text: var(--color-wildcat-blue);
-  --button-active-border: var(--color-wildcat-blue);
-  --button-active-background: var(--color-wildcat-blue);
-  --button-active-text: var(--color-wildcat-white);
-  --button-focus-border: var(--color-bluegrass);
-  --button-focus-background: var(--color-wildcat-white);
-  --button-focus-text: var(--color-wildcat-blue);
-  --fancy-link: var(--color-medium-blue);
-  --fancy-link-active: var(--color-light-blue);
-  --headline-group-super: var(--color-dark-gray);
-  --headline-group-head: var(--color-wildcat-black);
-  --headline-group-sub: var(--color-dark-gray);
-  --media-citation: var(--color-dark-gray);
-  --carousel-single-button: var(--color-dark-gray);
-  --carousel-single-button-art: var(--color-wildcat-white);
-  --carousel-center-button: var(--color-dark-gray);
-  --carousel-center-button-art: var(--color-wildcat-white);
-  --carousel-dot: var(--color-bluegrass);
-  --carousel-dot-active: var(--color-wildcat-black);
-  --carousel-center-caption: var(--color-wildcat-black);
-  --media-background: var(--color-wildcat-blue);
-  --statistic-head-color: var(--color-wildcat-blue);
-  --statistic-subhead-color: var(--color-bluegrass);
-  --logo-color: var(--color-wildcat-blue);
-  --wordmark-color: var(--color-wildcat-black);
-  --dashed-border-color: rgba(44, 42, 41, 0.3);
-  --form-borders: var(--color-cool-neutral);
-  color: var(--text);
-}
 .page-header.page-header--split.slab--dark-blue .page-header__content a:link, .page-header.page-header--split.slab--dark-blue .page-header__content a:visited {
   color: var(--link);
 }
@@ -11473,47 +11474,47 @@ button.mfp-close {
   color: var(--button-hover-text);
 }
 .page-header.page-header--split.slab--wildcat-blue .page-header__content {
-  --link: var(--color-wildcat-black);
-  --link-active: var(--color-wildcat-blue);
-  --menu-icon-color: var(--color-wildcat-blue);
-  --menu-icon-color-active: var(--color-wildcat-blue);
-  --text: var(--color-wildcat-black);
-  --accent: var(--color-sunset);
-  --button-border: var(--color-wildcat-blue);
-  --button-background: var(--color-wildcat-blue);
-  --button-text: var(--color-wildcat-white);
-  --button-disabled-border: var(--color-subtle-gray);
-  --button-disabled-background: var(--color-subtle-gray);
-  --button-disabled-text: var(--color-dark-gray);
-  --button-hover-border: var(--color-wildcat-blue);
-  --button-hover-background: var(--color-wildcat-white);
-  --button-hover-text: var(--color-wildcat-blue);
-  --button-active-border: var(--color-wildcat-blue);
-  --button-active-background: var(--color-wildcat-blue);
-  --button-active-text: var(--color-wildcat-white);
-  --button-focus-border: var(--color-bluegrass);
-  --button-focus-background: var(--color-wildcat-white);
+  --link: var(--color-wildcat-white);
+  --link-active: var(--color-sky);
+  --menu-icon-color: var(--color-cool-neutral);
+  --menu-icon-color-active: var(--color-cool-neutral);
+  --text: var(--color-wildcat-white);
+  --accent: var(--color-river-green);
+  --button-border: var(--color-wildcat-white);
+  --button-background: var(--color-wildcat-white);
+  --button-text: var(--color-wildcat-blue);
+  --button-disabled-border: rgba(237, 237, 237, 0.66);
+  --button-disabled-background: rgba(237, 237, 237, 0.66);
+  --button-disabled-text: var(--color-wildcat-blue);
+  --button-hover-border: var(--color-wildcat-white);
+  --button-hover-background: var(--color-wildcat-blue);
+  --button-hover-text: var(--color-wildcat-white);
+  --button-active-border: var(--color-dark-blue);
+  --button-active-background: var(--color-cool-neutral);
+  --button-active-text: var(--color-wildcat-blue);
+  --button-focus-border: var(--color-wildcat-white);
+  --button-focus-background: var(--color-cool-neutral);
   --button-focus-text: var(--color-wildcat-blue);
-  --fancy-link: var(--color-medium-blue);
-  --fancy-link-active: var(--color-light-blue);
-  --headline-group-super: var(--color-dark-gray);
-  --headline-group-head: var(--color-wildcat-black);
-  --headline-group-sub: var(--color-dark-gray);
-  --media-citation: var(--color-dark-gray);
+  --fancy-link: var(--color-wildcat-white);
+  --fancy-link-active: var(--color-sky);
+  --headline-group-super: var(--color-cool-neutral);
+  --headline-group-head: var(--color-wildcat-white);
+  --headline-group-sub: var(--color-cool-neutral);
+  --media-citation: var(--color-wildcat-white);
   --carousel-single-button: var(--color-dark-gray);
   --carousel-single-button-art: var(--color-wildcat-white);
-  --carousel-center-button: var(--color-dark-gray);
+  --carousel-center-button: transparent;
   --carousel-center-button-art: var(--color-wildcat-white);
-  --carousel-dot: var(--color-bluegrass);
-  --carousel-dot-active: var(--color-wildcat-black);
+  --carousel-dot: var(--color-subtle-gray);
+  --carousel-dot-active: var(--color-sky);
   --carousel-center-caption: var(--color-wildcat-black);
-  --media-background: var(--color-wildcat-blue);
-  --statistic-head-color: var(--color-wildcat-blue);
-  --statistic-subhead-color: var(--color-bluegrass);
-  --logo-color: var(--color-wildcat-blue);
-  --wordmark-color: var(--color-wildcat-black);
-  --dashed-border-color: rgba(44, 42, 41, 0.3);
-  --form-borders: var(--color-cool-neutral);
+  --media-background: var(--color-wildcat-black);
+  --statistic-head-color: var(--color-wildcat-white);
+  --statistic-subhead-color: var(--color-sky);
+  --logo-color: var(--color-wildcat-white);
+  --wordmark-color: var(--color-wildcat-white);
+  --dashed-border-color: rgba(255, 255, 255, 0.3);
+  --form-borders: transparent;
   color: var(--text);
 }
 .page-header.page-header--split.slab--wildcat-blue .page-header__content a:link, .page-header.page-header--split.slab--wildcat-blue .page-header__content a:visited {
@@ -11551,15 +11552,231 @@ button.mfp-close {
     max-height: 100%;
     padding: 2rem 3rem;
     background-color: #0033a0;
+    --link: var(--color-wildcat-white);
+    --link-active: var(--color-sky);
+    --menu-icon-color: var(--color-cool-neutral);
+    --menu-icon-color-active: var(--color-cool-neutral);
+    --text: var(--color-wildcat-white);
+    --accent: var(--color-river-green);
+    --button-border: var(--color-wildcat-white);
+    --button-background: var(--color-wildcat-white);
+    --button-text: var(--color-wildcat-blue);
+    --button-disabled-border: rgba(237, 237, 237, 0.66);
+    --button-disabled-background: rgba(237, 237, 237, 0.66);
+    --button-disabled-text: var(--color-wildcat-blue);
+    --button-hover-border: var(--color-wildcat-white);
+    --button-hover-background: var(--color-wildcat-blue);
+    --button-hover-text: var(--color-wildcat-white);
+    --button-active-border: var(--color-dark-blue);
+    --button-active-background: var(--color-cool-neutral);
+    --button-active-text: var(--color-wildcat-blue);
+    --button-focus-border: var(--color-wildcat-white);
+    --button-focus-background: var(--color-cool-neutral);
+    --button-focus-text: var(--color-wildcat-blue);
+    --fancy-link: var(--color-wildcat-white);
+    --fancy-link-active: var(--color-sky);
+    --headline-group-super: var(--color-cool-neutral);
+    --headline-group-head: var(--color-wildcat-white);
+    --headline-group-sub: var(--color-cool-neutral);
+    --media-citation: var(--color-wildcat-white);
+    --carousel-single-button: var(--color-dark-gray);
+    --carousel-single-button-art: var(--color-wildcat-white);
+    --carousel-center-button: transparent;
+    --carousel-center-button-art: var(--color-wildcat-white);
+    --carousel-dot: var(--color-subtle-gray);
+    --carousel-dot-active: var(--color-sky);
+    --carousel-center-caption: var(--color-wildcat-black);
+    --media-background: var(--color-wildcat-black);
+    --statistic-head-color: var(--color-wildcat-white);
+    --statistic-subhead-color: var(--color-sky);
+    --logo-color: var(--color-wildcat-white);
+    --wordmark-color: var(--color-wildcat-white);
+    --dashed-border-color: rgba(255, 255, 255, 0.3);
+    --form-borders: transparent;
+    color: var(--text);
+  }
+  .page-header.page-header--split .page-header__content a:link, .page-header.page-header--split .page-header__content a:visited {
+    color: var(--link);
+  }
+  .page-header.page-header--split .page-header__content a:hover, .page-header.page-header--split .page-header__content a:active {
+    color: var(--link-active);
+  }
+  .page-header.page-header--split .page-header__content a.button:link, .page-header.page-header--split .page-header__content a.button:visited {
+    color: var(--button-text);
+  }
+  .page-header.page-header--split .page-header__content a.button:hover, .page-header.page-header--split .page-header__content a.button:active {
+    color: var(--button-hover-text);
   }
   .page-header.page-header--split.slab--light-gray .page-header__content {
     background-color: #1f2c5e;
+    --link: var(--color-wildcat-white);
+    --link-active: var(--color-sky);
+    --menu-icon-color: var(--color-cool-neutral);
+    --menu-icon-color-active: var(--color-cool-neutral);
+    --text: var(--color-wildcat-white);
+    --accent: var(--color-river-green);
+    --button-border: var(--color-wildcat-white);
+    --button-background: var(--color-wildcat-white);
+    --button-text: var(--color-wildcat-blue);
+    --button-disabled-border: rgba(237, 237, 237, 0.66);
+    --button-disabled-background: rgba(237, 237, 237, 0.66);
+    --button-disabled-text: var(--color-wildcat-blue);
+    --button-hover-border: var(--color-wildcat-white);
+    --button-hover-background: var(--color-wildcat-blue);
+    --button-hover-text: var(--color-wildcat-white);
+    --button-active-border: var(--color-dark-blue);
+    --button-active-background: var(--color-cool-neutral);
+    --button-active-text: var(--color-wildcat-blue);
+    --button-focus-border: var(--color-wildcat-white);
+    --button-focus-background: var(--color-cool-neutral);
+    --button-focus-text: var(--color-wildcat-blue);
+    --fancy-link: var(--color-wildcat-white);
+    --fancy-link-active: var(--color-sky);
+    --headline-group-super: var(--color-cool-neutral);
+    --headline-group-head: var(--color-wildcat-white);
+    --headline-group-sub: var(--color-cool-neutral);
+    --media-citation: var(--color-wildcat-white);
+    --carousel-single-button: var(--color-dark-gray);
+    --carousel-single-button-art: var(--color-wildcat-white);
+    --carousel-center-button: transparent;
+    --carousel-center-button-art: var(--color-wildcat-white);
+    --carousel-dot: var(--color-subtle-gray);
+    --carousel-dot-active: var(--color-sky);
+    --carousel-center-caption: var(--color-wildcat-black);
+    --media-background: var(--color-wildcat-black);
+    --statistic-head-color: var(--color-wildcat-white);
+    --statistic-subhead-color: var(--color-sky);
+    --logo-color: var(--color-wildcat-white);
+    --wordmark-color: var(--color-wildcat-white);
+    --dashed-border-color: rgba(255, 255, 255, 0.3);
+    --form-borders: transparent;
+    color: var(--text);
+  }
+  .page-header.page-header--split.slab--light-gray .page-header__content a:link, .page-header.page-header--split.slab--light-gray .page-header__content a:visited {
+    color: var(--link);
+  }
+  .page-header.page-header--split.slab--light-gray .page-header__content a:hover, .page-header.page-header--split.slab--light-gray .page-header__content a:active {
+    color: var(--link-active);
+  }
+  .page-header.page-header--split.slab--light-gray .page-header__content a.button:link, .page-header.page-header--split.slab--light-gray .page-header__content a.button:visited {
+    color: var(--button-text);
+  }
+  .page-header.page-header--split.slab--light-gray .page-header__content a.button:hover, .page-header.page-header--split.slab--light-gray .page-header__content a.button:active {
+    color: var(--button-hover-text);
   }
   .page-header.page-header--split.slab--dark-blue .page-header__content {
     background-color: #fff;
+    --link: var(--color-wildcat-black);
+    --link-active: var(--color-wildcat-blue);
+    --menu-icon-color: var(--color-wildcat-blue);
+    --menu-icon-color-active: var(--color-wildcat-blue);
+    --text: var(--color-wildcat-black);
+    --accent: var(--color-sunset);
+    --button-border: var(--color-wildcat-blue);
+    --button-background: var(--color-wildcat-blue);
+    --button-text: var(--color-wildcat-white);
+    --button-disabled-border: var(--color-subtle-gray);
+    --button-disabled-background: var(--color-subtle-gray);
+    --button-disabled-text: var(--color-dark-gray);
+    --button-hover-border: var(--color-wildcat-blue);
+    --button-hover-background: var(--color-wildcat-white);
+    --button-hover-text: var(--color-wildcat-blue);
+    --button-active-border: var(--color-wildcat-blue);
+    --button-active-background: var(--color-wildcat-blue);
+    --button-active-text: var(--color-wildcat-white);
+    --button-focus-border: var(--color-bluegrass);
+    --button-focus-background: var(--color-wildcat-white);
+    --button-focus-text: var(--color-wildcat-blue);
+    --fancy-link: var(--color-medium-blue);
+    --fancy-link-active: var(--color-light-blue);
+    --headline-group-super: var(--color-dark-gray);
+    --headline-group-head: var(--color-wildcat-black);
+    --headline-group-sub: var(--color-dark-gray);
+    --media-citation: var(--color-dark-gray);
+    --carousel-single-button: var(--color-dark-gray);
+    --carousel-single-button-art: var(--color-wildcat-white);
+    --carousel-center-button: var(--color-dark-gray);
+    --carousel-center-button-art: var(--color-wildcat-white);
+    --carousel-dot: var(--color-bluegrass);
+    --carousel-dot-active: var(--color-wildcat-black);
+    --carousel-center-caption: var(--color-wildcat-black);
+    --media-background: var(--color-wildcat-blue);
+    --statistic-head-color: var(--color-wildcat-blue);
+    --statistic-subhead-color: var(--color-bluegrass);
+    --logo-color: var(--color-wildcat-blue);
+    --wordmark-color: var(--color-wildcat-black);
+    --dashed-border-color: rgba(44, 42, 41, 0.3);
+    --form-borders: var(--color-cool-neutral);
+    color: var(--text);
+  }
+  .page-header.page-header--split.slab--dark-blue .page-header__content a:link, .page-header.page-header--split.slab--dark-blue .page-header__content a:visited {
+    color: var(--link);
+  }
+  .page-header.page-header--split.slab--dark-blue .page-header__content a:hover, .page-header.page-header--split.slab--dark-blue .page-header__content a:active {
+    color: var(--link-active);
+  }
+  .page-header.page-header--split.slab--dark-blue .page-header__content a.button:link, .page-header.page-header--split.slab--dark-blue .page-header__content a.button:visited {
+    color: var(--button-text);
+  }
+  .page-header.page-header--split.slab--dark-blue .page-header__content a.button:hover, .page-header.page-header--split.slab--dark-blue .page-header__content a.button:active {
+    color: var(--button-hover-text);
   }
   .page-header.page-header--split.slab--wildcat-blue .page-header__content {
     background-color: #fff;
+    --link: var(--color-wildcat-black);
+    --link-active: var(--color-wildcat-blue);
+    --menu-icon-color: var(--color-wildcat-blue);
+    --menu-icon-color-active: var(--color-wildcat-blue);
+    --text: var(--color-wildcat-black);
+    --accent: var(--color-sunset);
+    --button-border: var(--color-wildcat-blue);
+    --button-background: var(--color-wildcat-blue);
+    --button-text: var(--color-wildcat-white);
+    --button-disabled-border: var(--color-subtle-gray);
+    --button-disabled-background: var(--color-subtle-gray);
+    --button-disabled-text: var(--color-dark-gray);
+    --button-hover-border: var(--color-wildcat-blue);
+    --button-hover-background: var(--color-wildcat-white);
+    --button-hover-text: var(--color-wildcat-blue);
+    --button-active-border: var(--color-wildcat-blue);
+    --button-active-background: var(--color-wildcat-blue);
+    --button-active-text: var(--color-wildcat-white);
+    --button-focus-border: var(--color-bluegrass);
+    --button-focus-background: var(--color-wildcat-white);
+    --button-focus-text: var(--color-wildcat-blue);
+    --fancy-link: var(--color-medium-blue);
+    --fancy-link-active: var(--color-light-blue);
+    --headline-group-super: var(--color-dark-gray);
+    --headline-group-head: var(--color-wildcat-black);
+    --headline-group-sub: var(--color-dark-gray);
+    --media-citation: var(--color-dark-gray);
+    --carousel-single-button: var(--color-dark-gray);
+    --carousel-single-button-art: var(--color-wildcat-white);
+    --carousel-center-button: var(--color-dark-gray);
+    --carousel-center-button-art: var(--color-wildcat-white);
+    --carousel-dot: var(--color-bluegrass);
+    --carousel-dot-active: var(--color-wildcat-black);
+    --carousel-center-caption: var(--color-wildcat-black);
+    --media-background: var(--color-wildcat-blue);
+    --statistic-head-color: var(--color-wildcat-blue);
+    --statistic-subhead-color: var(--color-bluegrass);
+    --logo-color: var(--color-wildcat-blue);
+    --wordmark-color: var(--color-wildcat-black);
+    --dashed-border-color: rgba(44, 42, 41, 0.3);
+    --form-borders: var(--color-cool-neutral);
+    color: var(--text);
+  }
+  .page-header.page-header--split.slab--wildcat-blue .page-header__content a:link, .page-header.page-header--split.slab--wildcat-blue .page-header__content a:visited {
+    color: var(--link);
+  }
+  .page-header.page-header--split.slab--wildcat-blue .page-header__content a:hover, .page-header.page-header--split.slab--wildcat-blue .page-header__content a:active {
+    color: var(--link-active);
+  }
+  .page-header.page-header--split.slab--wildcat-blue .page-header__content a.button:link, .page-header.page-header--split.slab--wildcat-blue .page-header__content a.button:visited {
+    color: var(--button-text);
+  }
+  .page-header.page-header--split.slab--wildcat-blue .page-header__content a.button:hover, .page-header.page-header--split.slab--wildcat-blue .page-header__content a.button:active {
+    color: var(--button-hover-text);
   }
 }
 

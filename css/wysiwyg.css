@@ -60,8 +60,8 @@
 }
 @font-face {
   font-family: "iconfont";
-  src: url("../fonts/icons-419636261.eot");
-  src: url("../fonts/icons-419636261.eot?#iefix") format("eot"), url("../fonts/icons-419636261.woff2") format("woff2"), url("../fonts/icons-419636261.woff") format("woff"), url("../fonts/icons-419636261.ttf") format("truetype"), url("../fonts/icons-419636261.svg#icons-419636261") format("svg");
+  src: url("../fonts/icons-756049454.eot");
+  src: url("../fonts/icons-756049454.eot?#iefix") format("eot"), url("../fonts/icons-756049454.woff2") format("woff2"), url("../fonts/icons-756049454.woff") format("woff"), url("../fonts/icons-756049454.ttf") format("truetype"), url("../fonts/icons-756049454.svg#icons-756049454") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1568,8 +1568,8 @@
 .ck-content a.button:hover.button--ghost,
 .ck-content input.button:hover.button--ghost {
   background-color: var(--button-background);
-  border-color: var(--button-border);
-  color: var(--button-text);
+  border-color: var(--button-background);
+  --button-hover-text: var(--button-hover-background);
 }
 .ck-content button:active, .ck-content button[aria-pressed=true],
 .ck-content a.button:active,
@@ -1904,7 +1904,8 @@
 .ck-content input.button.button--ghost {
   background-color: transparent;
   border-color: var(--button-hover-border);
-  color: var(--button-hover-text);
+  --button-text: var(--button-hover-text);
+  --button-border: var(--button-hover-border);
 }
 .ck-content button.button--bluegrass,
 .ck-content a.button.button--bluegrass,
