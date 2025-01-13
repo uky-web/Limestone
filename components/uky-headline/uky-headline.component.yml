@@ -1,0 +1,38 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+
+name: uky-headline
+status: experimental
+group: Content
+
+props:
+  type: object
+
+  required:
+    - headline
+
+  properties:
+    superhead:
+        type: string
+        title: Superhead
+        description: Text appearing above the heaadline
+
+    headline:
+        type: string
+        title: Superhead
+        description: The main headline text
+
+    subhead:
+        type: string
+        title: Subhead
+        description: Text appearing below the heaadline
+
+slots:
+  headline_group:
+    title: Headline Group
+    required: true
+    description: A group consisiting of a headline with optional super/subheads
+
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once

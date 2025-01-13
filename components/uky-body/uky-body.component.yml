@@ -1,0 +1,23 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+
+name: uky-body
+status: experimental
+group: Content
+
+props:
+  type: object
+  required:
+    - content
+
+  properties:
+    content:
+      type: string
+      title: Content
+      description: The body text
+
+  minimal: {}
+
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once

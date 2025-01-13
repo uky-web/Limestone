@@ -1,0 +1,25 @@
+.uky-body {
+  margin-bottom: 1rem;
+}
+.uky-body:last-child {
+  margin-bottom: 0;
+}
+.uky-body::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.uky-body strong,
+.uky-body b {
+  font-weight: 500;
+}
+.uky-body p:first-child {
+  margin-top: 0;
+}
+.uky-body p:last-child {
+  margin-bottom: 0;
+}
+.uky-body a.button,
+.uky-body button {
+  background-image: none;
+}

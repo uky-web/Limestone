@@ -1,0 +1,17 @@
+{% if level > 0 and level <= 6 %}
+	{% set tag = 'h' ~ level %}
+{% else %}
+	{% set tag = 'h1' %}
+{% endif %}
+
+<hgroup class="uky-headline">
+{% block headline_group %}
+   {% if superhead is not empty %}<p class="uky-headline__super">{{ superhead }}</p>{% endif %}
+   {% apply spaceless %}
+      <{{tag}} class="headline">
+         {{ headline }}
+      </{{tag}}>
+   {% endapply %}	
+   {% if subhead is not empty %}<p class="uky-headline__sub">{{ subhead }}</p>{% endif %}
+{% endblock %}
+</hgroup>
