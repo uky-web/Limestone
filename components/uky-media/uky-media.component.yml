@@ -1,0 +1,34 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+
+name: uky-media
+status: experimental
+group: Content
+
+props:
+  type: object
+
+  properties:
+    hide_heading:
+      title: Hide Heading
+      type: boolean
+      default: false
+
+slots:
+  figure_caption:
+    title: Caption
+    required: true
+    description: The caption to be displayed alongside the media
+
+  figure_media:
+    title: Media
+    required: true
+    description: The media entity
+
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+
+  js:
+    uky_media.js: { attributes: { defer: true } }
+    my-other-file.js: {}

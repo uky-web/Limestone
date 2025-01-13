@@ -1,0 +1,21 @@
+{% if field_media %}
+  <div class="pullquote pullquote--{{ field_theme_color_scheme }}{% if field_brief == 1 %} pullquote--brief{% endif %}">
+    <div class="pullquote__quote">
+      {{ field_description }}
+    </div>
+    <div class="pullquote__meta">
+      {{ field_media }}
+      <cite class="pullquote__attribution">
+        <span class="pullquote__first-line">{{ field_attribution_1 }}</span>
+        <span class="pullquote__second-line">{{ field_attribution_2 }}</span>
+      </cite>
+    </div>
+  </div>
+{% else %}
+  <div class="pulltext pulltext--{{ field_theme_color_scheme }}">
+    <div class="pulltext__content">
+      {{ field_description }}
+    </div>
+  </div>
+{% endif %}
+

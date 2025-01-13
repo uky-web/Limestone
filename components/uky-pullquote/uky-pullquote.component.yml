@@ -1,0 +1,66 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+
+name: uky-pullquote
+status: stable
+group: Content
+
+props:
+  type: object
+  required:
+    - field_description
+    - field_media
+    - field_attribution_1
+    - field_attribution_2
+    - field_theme_color_scheme
+    - field_brief
+
+  properties:
+    field_description:
+      title: Quote
+      type: string
+      description: The pull quote text.
+
+    field_media:
+      title: Media
+      type: object
+      description: The media reference, can be an image or any media type.
+    
+    field_attribution_1:
+      title: First Attribution Line
+      type: string
+      description: The first line of the pull quote attribution.
+
+    field_attribution_2:
+      title: Second Attribution Line
+      type: string
+      description: The second line of the pull quote attribution.
+
+    field_theme_color_scheme:
+      title: Theme Color Scheme
+      type: string
+      description: The color scheme for the pull quote.
+      enum:
+        - dark
+        - light
+        - brief
+
+    field_brief:
+      title: Brief Checkbox
+      type: boolean
+      description: The brief checkbox that removes image and shortens text. 
+
+slots:
+  body:
+    title: Pullquote Body
+    required: true
+    description: The body of the pullquote.
+    
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+  css:
+    component:
+      uky_pullquote.scss: {}  
+  js:
+    uky_pullquote.js: { attributes: { defer: true } }
