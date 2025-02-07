@@ -60,8 +60,8 @@
 }
 @font-face {
   font-family: "iconfont";
-  src: url("../fonts/icons-752792369.eot");
-  src: url("../fonts/icons-752792369.eot?#iefix") format("eot"), url("../fonts/icons-752792369.woff2") format("woff2"), url("../fonts/icons-752792369.woff") format("woff"), url("../fonts/icons-752792369.ttf") format("truetype"), url("../fonts/icons-752792369.svg#icons-752792369") format("svg");
+  src: url("../fonts/icons-937431514.eot");
+  src: url("../fonts/icons-937431514.eot?#iefix") format("eot"), url("../fonts/icons-937431514.woff2") format("woff2"), url("../fonts/icons-937431514.woff") format("woff"), url("../fonts/icons-937431514.ttf") format("truetype"), url("../fonts/icons-937431514.svg#icons-937431514") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1965,31 +1965,31 @@
 .ck-content button.video-button.video-button--paused .video-button__play {
   display: block;
 }
-.ck-content ul li,
+.ck-content #main-content ul li,
 .ck-content ol li {
   font-size: 1rem;
   line-height: 1.5rem;
   margin-bottom: 0.5rem;
 }
 @media screen and (min-width: 76rem) {
-  .ck-content ul li,
+  .ck-content #main-content ul li,
   .ck-content ol li {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
-.ck-content ul.no-decoration,
+.ck-content #main-content ul.no-decoration,
 .ck-content ol.no-decoration {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.ck-content ul.no-decoration > li,
+.ck-content #main-content ul.no-decoration > li,
 .ck-content ol.no-decoration > li {
   margin-left: 0;
   text-indent: 0;
 }
-.ck-content ul.no-decoration > li::before,
+.ck-content #main-content ul.no-decoration > li::before,
 .ck-content ol.no-decoration > li::before {
   display: none;
 }
